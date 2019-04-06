@@ -12,8 +12,10 @@ import SceneKit
 
 class Plane: SCNNode {
     
-    private let plane: SCNBox
-    let node: SCNNode
+    var plane: SCNBox
+    var node: SCNNode
+    
+    var textNode: TextPlane?
     
     init(color: UIColor = .clear) {
         plane = SCNBox(width: 1, height: CGFloat(0.1), length: 0, chamferRadius: 0)
@@ -36,15 +38,15 @@ class Plane: SCNNode {
     
     //Adding the scene light to light node
     func addLightNode(with sceneLight: SCNLight) {
-        let sceneLight = sceneLight
-        sceneLight.type = .omni
-        
-        let lightNode = SCNNode()
-        
-        lightNode.light = sceneLight
-        lightNode.position = SCNVector3(1, 1, 1)
-        
-        addChildNode(lightNode)
+//        let sceneLight = sceneLight
+//        sceneLight.type = .omni
+//        
+//        let lightNode = SCNNode()
+//        
+//        lightNode.light = sceneLight
+//        lightNode.position = SCNVector3(1, 1, 1)
+//        
+//        addChildNode(lightNode)
     }
     
 }

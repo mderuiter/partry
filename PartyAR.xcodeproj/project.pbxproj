@@ -20,6 +20,10 @@
 		34098B0422589C78001512C6 /* ImagePlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34098B0122589C78001512C6 /* ImagePlane.swift */; };
 		34098B082258A0CA001512C6 /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34098B072258A0CA001512C6 /* QRScanner.swift */; };
 		34098B0A2258A0F3001512C6 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34098B092258A0F3001512C6 /* SCNVector3+Extensions.swift */; };
+		34A4EE4D2258AFCA00F243AF /* PersonaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34A4EE4C2258AFCA00F243AF /* PersonaView.xib */; };
+		34A4EE4F2258B0E400F243AF /* ViewPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4EE4E2258B0E400F243AF /* ViewPlane.swift */; };
+		34A4EE512258B18100F243AF /* PersonaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4EE502258B18100F243AF /* PersonaView.swift */; };
+		34A4EE532258B95000F243AF /* TextPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4EE522258B95000F243AF /* TextPlane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		34098B0122589C78001512C6 /* ImagePlane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePlane.swift; sourceTree = "<group>"; };
 		34098B072258A0CA001512C6 /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 		34098B092258A0F3001512C6 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		34A4EE4C2258AFCA00F243AF /* PersonaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonaView.xib; sourceTree = "<group>"; };
+		34A4EE4E2258B0E400F243AF /* ViewPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPlane.swift; sourceTree = "<group>"; };
+		34A4EE502258B18100F243AF /* PersonaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaView.swift; sourceTree = "<group>"; };
+		34A4EE522258B95000F243AF /* TextPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 		34098ADF22589964001512C6 /* PartyAR */ = {
 			isa = PBXGroup;
 			children = (
+				34A4EE4B2258AFA200F243AF /* Views */,
 				34098AF422589BC1001512C6 /* Application */,
 				34098AFE22589C6A001512C6 /* Models */,
 				34098AF622589BE6001512C6 /* Resources */,
@@ -124,8 +133,19 @@
 				34098B0122589C78001512C6 /* ImagePlane.swift */,
 				34098AFF22589C78001512C6 /* Plane.swift */,
 				34098B0022589C78001512C6 /* VideoPlane.swift */,
+				34A4EE4E2258B0E400F243AF /* ViewPlane.swift */,
+				34A4EE522258B95000F243AF /* TextPlane.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		34A4EE4B2258AFA200F243AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34A4EE4C2258AFCA00F243AF /* PersonaView.xib */,
+				34A4EE502258B18100F243AF /* PersonaView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +209,7 @@
 				34098AED22589965001512C6 /* LaunchScreen.storyboard in Resources */,
 				34098AEA22589965001512C6 /* Assets.xcassets in Resources */,
 				34098AE822589964001512C6 /* Main.storyboard in Resources */,
+				34A4EE4D2258AFCA00F243AF /* PersonaView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,15 +221,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				34098B082258A0CA001512C6 /* QRScanner.swift in Sources */,
+				34A4EE4F2258B0E400F243AF /* ViewPlane.swift in Sources */,
 				34098AFB22589C31001512C6 /* CustomARSceneDelegate.swift in Sources */,
 				34098AFC22589C31001512C6 /* CustomARSessionDelegate.swift in Sources */,
 				34098AE522589964001512C6 /* ViewController.swift in Sources */,
 				34098B0322589C78001512C6 /* VideoPlane.swift in Sources */,
 				34098AE122589964001512C6 /* AppDelegate.swift in Sources */,
 				34098B0222589C78001512C6 /* Plane.swift in Sources */,
+				34A4EE532258B95000F243AF /* TextPlane.swift in Sources */,
 				34098B0422589C78001512C6 /* ImagePlane.swift in Sources */,
 				34098AFD22589C31001512C6 /* StatusViewController.swift in Sources */,
 				34098B0A2258A0F3001512C6 /* SCNVector3+Extensions.swift in Sources */,
+				34A4EE512258B18100F243AF /* PersonaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

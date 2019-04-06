@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         
         sessionDelegate = CustomARSessionDelegate()
         sessionDelegate?.delegate = self
+        sessionDelegate?.sceneView = sceneView
         
         sceneView.delegate = sceneDelegate
         sceneView.session.delegate = sessionDelegate
@@ -68,10 +69,13 @@ class ViewController: UIViewController {
         let viewTouchLocation:CGPoint = touch.location(in: sceneView)
         guard let result = sceneView.hitTest(viewTouchLocation, options: nil).first,
             let plane = sceneDelegate?.planes.first(where: { $0.1.node == result.node })?.value,
-            let videoPlane = plane as? VideoPlane
+            let imagePlane = plane as? ImagePlane
             else { return }
         
-        videoPlane.toggleVideoPlayer()
+        print(sceneDelegate?.planes.count)
+        imagePlane.textNode?.isHidden = !imagePlane.textNode!.isHidden
+        print("Is tapped on image")
+        //videoPlane.toggleVideoPlayer()
     }
     
 }
@@ -90,16 +94,11 @@ extension ViewController: SpinnerDelegate {
 extension ViewController: ARRestartDelegate {
     
     func restartTracking() {
-        
-        
+        guard let detectionImages = ARReferenceImage.referenceImages(inGroupNamed: ReferenceImageGroupName, bundle: nil) else { return }
         
         let imageTrackingConfiguration: ARImageTrackingConfiguration = {
             let configuration = ARImageTrackingConfiguration()
-            
-            if let detectionImages = ARReferenceImage.referenceImages(inGroupNamed: ReferenceImageGroupName, bundle: nil) {
-                configuration.trackingImages = detectionImages
-            }
-            
+            configuration.trackingImages = detectionImages
             configuration.isLightEstimationEnabled = true
             return configuration
         }()

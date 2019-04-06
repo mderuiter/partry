@@ -17,6 +17,7 @@ class CustomARSessionDelegate: NSObject {
     
     let maxFrameUpdateCount: Int = 10
     var currentFrameCount: Int = 0
+    var sceneView: ARSCNView? = nil
     
     var isRestartAvailable = true
     weak var delegate: ARRestartDelegate?
@@ -42,22 +43,26 @@ extension CustomARSessionDelegate: ARSessionDelegate {
         }
     }
     
-    func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        currentFrameCount += 1
-        
-        if currentFrameCount < maxFrameUpdateCount {
-            return
-        }
-        
-        currentFrameCount = 0
-        
-        DispatchQueue.global(qos: .background).async {
-            let qrResponses = QRScanner.findQR(in: frame)
-            print(qrResponses)
+//    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+//        currentFrameCount += 1
+//
+//        if currentFrameCount < maxFrameUpdateCount {
+//            return
+//        }
+//
+//        currentFrameCount = 0
+//
+//        sceneView?.scene.rootNode.childNodes.forEach { $0.removeFromParentNode() }
+//
+//        DispatchQueue.global(qos: .background).async {
+//            let qrResponses = QRScanner.findQR(in: frame)
+//            print(qrResponses)
 //            for response in qrResponses {
-//                print(response.feature.messageString ?? "no message found")
+//                let plane = Plane(color: .red)
+//                plane.position = response.position
+//                self.sceneView?.scene.rootNode.addChildNode(plane)
 //            }
-        }
-    }
+//        }
+//    }
     
 }

@@ -80,6 +80,7 @@ public struct QRScanner {
         guard let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: nil) else {
             return []
         }
+        
         return detector.features(in: image) as? [CIQRCodeFeature] ?? []
     }
 }
