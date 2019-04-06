@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<device id="retina4_7" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<deployment identifier="iOS"/>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<!--View Controller-->
+<scene sceneID="tXr-a1-R10">
+<objects>
+<viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Augemented" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<subviews>
+<arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+</arscnView>
+<containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0B6-kV-WUR">
+<rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+<constraints>
+<constraint firstAttribute="height" constant="85" id="HuB-2m-D34"/>
+</constraints>
+<connections>
+<segue destination="dIU-eZ-fP0" kind="embed" id="Hd1-KE-Hdj"/>
+</connections>
+</containerView>
+<activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-md-oX4">
+<rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+</activityIndicatorView>
+</subviews>
+<color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<constraints>
+<constraint firstItem="P9K-md-oX4" firstAttribute="centerY" secondItem="U0K-SW-4ec" secondAttribute="centerY" id="8YB-E1-1nQ"/>
+<constraint firstItem="0B6-kV-WUR" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="Cte-F7-xdr"/>
+<constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="U0K-SW-4ec" secondAttribute="leading" id="GsS-dJ-CKf"/>
+<constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="U0K-SW-4ec" secondAttribute="bottom" id="VpT-BR-CcM"/>
+<constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="U0K-SW-4ec" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+<constraint firstAttribute="trailing" secondItem="0B6-kV-WUR" secondAttribute="trailing" id="cHL-u6-g40"/>
+<constraint firstItem="P9K-md-oX4" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="fM1-rK-hzH"/>
+<constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+<constraint firstItem="0B6-kV-WUR" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="z6q-c8-UMZ"/>
+</constraints>
+<viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+</view>
+<connections>
+<outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+<outlet property="spinner" destination="P9K-md-oX4" id="ID1-g1-hoG"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="56.799999999999997" y="27.436281859070466"/>
+</scene>
+<!--Status View Controller-->
+<scene sceneID="MrA-77-EF2">
+<objects>
+<viewController id="dIU-eZ-fP0" customClass="StatusViewController" customModule="Augemented" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="gRJ-Sq-dcH">
+<rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<visualEffectView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="PIt-YN-9kg" userLabel="Message Panel">
+<rect key="frame" x="16" y="20" width="125" height="32"/>
+<view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Khm-0U-ur3">
+<rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wuj-Ph-HOl">
+<rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
+<view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EDH-XE-MAJ">
+<rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" text="Tracking status" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abF-dR-e40" userLabel="Messages label">
+<rect key="frame" x="16" y="8" width="93" height="16"/>
+<fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+<nil key="textColor"/>
+<color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<size key="shadowOffset" width="1" height="1"/>
+</label>
+</subviews>
+<constraints>
+<constraint firstItem="abF-dR-e40" firstAttribute="top" secondItem="EDH-XE-MAJ" secondAttribute="top" constant="8" id="2aE-sS-FZU"/>
+<constraint firstItem="abF-dR-e40" firstAttribute="leading" secondItem="EDH-XE-MAJ" secondAttribute="leading" constant="16" id="4Mw-FY-7hB"/>
+<constraint firstItem="abF-dR-e40" firstAttribute="trailing" secondItem="EDH-XE-MAJ" secondAttribute="trailing" constant="-16" id="e13-Ku-41D"/>
+<constraint firstItem="abF-dR-e40" firstAttribute="centerY" secondItem="EDH-XE-MAJ" secondAttribute="centerY" id="j8b-Jt-0Pd"/>
+</constraints>
+</view>
+<vibrancyEffect>
+<blurEffect style="extraLight"/>
+</vibrancyEffect>
+</visualEffectView>
+</subviews>
+<constraints>
+<constraint firstAttribute="trailing" secondItem="Wuj-Ph-HOl" secondAttribute="trailing" id="TiJ-KV-ljB"/>
+<constraint firstItem="Wuj-Ph-HOl" firstAttribute="leading" secondItem="Khm-0U-ur3" secondAttribute="leading" id="UuA-cO-HqK"/>
+<constraint firstItem="Wuj-Ph-HOl" firstAttribute="top" secondItem="Khm-0U-ur3" secondAttribute="top" id="sVm-rF-z1x"/>
+</constraints>
+</view>
+<constraints>
+<constraint firstAttribute="bottom" secondItem="abF-dR-e40" secondAttribute="bottom" constant="8" id="IM6-bD-fbP"/>
+</constraints>
+<blurEffect style="light"/>
+<userDefinedRuntimeAttributes>
+<userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+<integer key="value" value="3"/>
+</userDefinedRuntimeAttribute>
+</userDefinedRuntimeAttributes>
+</visualEffectView>
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxN-6t-cZR" userLabel="Restart Experience Button Icon">
+<rect key="frame" x="331" y="0.0" width="44" height="59"/>
+<constraints>
+<constraint firstAttribute="width" constant="44" id="Hur-P6-fXt"/>
+<constraint firstAttribute="height" constant="59" id="f7f-dF-nhO"/>
+</constraints>
+<inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="12"/>
+<state key="normal" image="restart"/>
+<state key="selected" image="restartPressed"/>
+<state key="highlighted" image="restartPressed"/>
+<connections>
+<action selector="restartExperience:" destination="dIU-eZ-fP0" eventType="touchUpInside" id="r7H-BK-s3C"/>
+</connections>
+</button>
+</subviews>
+<color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+<constraints>
+<constraint firstItem="FxN-6t-cZR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PIt-YN-9kg" secondAttribute="trailing" constant="8" id="3uh-pC-1Y6"/>
+<constraint firstItem="PIt-YN-9kg" firstAttribute="top" secondItem="FxN-6t-cZR" secondAttribute="top" constant="20" id="RqX-9G-xPT"/>
+<constraint firstItem="kPG-3S-5lV" firstAttribute="trailing" secondItem="FxN-6t-cZR" secondAttribute="trailing" id="eR0-1D-4xy"/>
+<constraint firstItem="FxN-6t-cZR" firstAttribute="top" secondItem="kPG-3S-5lV" secondAttribute="top" id="fEG-0X-x7c"/>
+<constraint firstItem="PIt-YN-9kg" firstAttribute="leading" secondItem="kPG-3S-5lV" secondAttribute="leading" constant="16" id="v1w-uZ-sNY"/>
+</constraints>
+<viewLayoutGuide key="safeArea" id="kPG-3S-5lV"/>
+</view>
+<connections>
+<outlet property="messageLabel" destination="abF-dR-e40" id="EwI-JQ-1Fh"/>
+<outlet property="messagePanel" destination="PIt-YN-9kg" id="nb3-vE-zkq"/>
+<outlet property="restartExperienceButton" destination="FxN-6t-cZR" id="0fm-R1-B2Z"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="HrV-NR-Ifw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="57" y="-383"/>
+</scene>
+</scenes>
+<resources>
+<image name="restart" width="20" height="23"/>
+<image name="restartPressed" width="20" height="23"/>
+</resources>
+</document>
