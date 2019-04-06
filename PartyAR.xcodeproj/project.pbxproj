@@ -18,6 +18,8 @@
 		34098B0222589C78001512C6 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34098AFF22589C78001512C6 /* Plane.swift */; };
 		34098B0322589C78001512C6 /* VideoPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34098B0022589C78001512C6 /* VideoPlane.swift */; };
 		34098B0422589C78001512C6 /* ImagePlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34098B0122589C78001512C6 /* ImagePlane.swift */; };
+		34098B082258A0CA001512C6 /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34098B072258A0CA001512C6 /* QRScanner.swift */; };
+		34098B0A2258A0F3001512C6 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34098B092258A0F3001512C6 /* SCNVector3+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		34098AFF22589C78001512C6 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		34098B0022589C78001512C6 /* VideoPlane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlane.swift; sourceTree = "<group>"; };
 		34098B0122589C78001512C6 /* ImagePlane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePlane.swift; sourceTree = "<group>"; };
+		34098B072258A0CA001512C6 /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
+		34098B092258A0F3001512C6 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +70,10 @@
 		34098ADF22589964001512C6 /* PartyAR */ = {
 			isa = PBXGroup;
 			children = (
-				34098AFE22589C6A001512C6 /* Models */,
 				34098AF422589BC1001512C6 /* Application */,
-				34098AF522589BE0001512C6 /* View Controllers */,
+				34098AFE22589C6A001512C6 /* Models */,
 				34098AF622589BE6001512C6 /* Resources */,
+				34098AF522589BE0001512C6 /* View Controllers */,
 			);
 			path = PartyAR;
 			sourceTree = "<group>";
@@ -89,6 +93,8 @@
 				34098AF822589C30001512C6 /* CustomARSceneDelegate.swift */,
 				34098AF922589C30001512C6 /* CustomARSessionDelegate.swift */,
 				34098AFA22589C31001512C6 /* StatusViewController.swift */,
+				34098B072258A0CA001512C6 /* QRScanner.swift */,
+				34098B092258A0F3001512C6 /* SCNVector3+Extensions.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34098B082258A0CA001512C6 /* QRScanner.swift in Sources */,
 				34098AFB22589C31001512C6 /* CustomARSceneDelegate.swift in Sources */,
 				34098AFC22589C31001512C6 /* CustomARSessionDelegate.swift in Sources */,
 				34098AE522589964001512C6 /* ViewController.swift in Sources */,
@@ -201,6 +208,7 @@
 				34098B0222589C78001512C6 /* Plane.swift in Sources */,
 				34098B0422589C78001512C6 /* ImagePlane.swift in Sources */,
 				34098AFD22589C31001512C6 /* StatusViewController.swift in Sources */,
+				34098B0A2258A0F3001512C6 /* SCNVector3+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

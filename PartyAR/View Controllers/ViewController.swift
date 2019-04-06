@@ -91,6 +91,8 @@ extension ViewController: ARRestartDelegate {
     
     func restartTracking() {
         
+        
+        
         let imageTrackingConfiguration: ARImageTrackingConfiguration = {
             let configuration = ARImageTrackingConfiguration()
             

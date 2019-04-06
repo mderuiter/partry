@@ -14,6 +14,10 @@ protocol ARRestartDelegate: class {
 }
 
 class CustomARSessionDelegate: NSObject {
+    
+    let maxFrameUpdateCount: Int = 10
+    var currentFrameCount: Int = 0
+    
     var isRestartAvailable = true
     weak var delegate: ARRestartDelegate?
 }
@@ -35,6 +39,24 @@ extension CustomARSessionDelegate: ARSessionDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.isRestartAvailable = true
+        }
+    }
+    
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        currentFrameCount += 1
+        
+        if currentFrameCount < maxFrameUpdateCount {
+            return
+        }
+        
+        currentFrameCount = 0
+        
+        DispatchQueue.global(qos: .background).async {
+            let qrResponses = QRScanner.findQR(in: frame)
+            print(qrResponses)
+//            for response in qrResponses {
+//                print(response.feature.messageString ?? "no message found")
+//            }
         }
     }
     
